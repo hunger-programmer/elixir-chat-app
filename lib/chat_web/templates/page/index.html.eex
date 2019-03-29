@@ -1,0 +1,33 @@
+  <div class="row slow-hide">
+        <div class="col s12">
+            <table>
+                <thead>
+                <tr>
+                    <th>NO.</th>
+                    <th>Beer lover</th>
+                    <th>Your poison</th>
+                </tr>
+                </thead>
+
+                <tbody id="msg-list">
+
+                 <%= for m <- @messages do %>
+                    <tr id="<%= m.id %>">
+                    <td><i class="material-icons prefix">local_drink</i></td>
+                                        <td><%= m.message %></td>
+                                        <td><%= m.name %></td>
+                                    </tr>
+                  <% end %>
+
+                </tbody>
+            </table>
+        </div>
+        <div class="col s12">
+        <button class="btn btn-danger btn-block" type="button" id="submit" style="display: none;">
+        Randomly pick who pays
+        </button>
+
+</div>
+    </div>
+
+

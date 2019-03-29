@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script
+  src="http://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+       <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>
+Beer deer
+</title>
+<link rel="apple-touch-icon" sizes="57x57" href="/images/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/images/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/images/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/images/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/images/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/images/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/images/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/images/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/images/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+<link rel="manifest" href="/images/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/images/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+</head>
+<body>
+
+<div id="cover">
+<div class="wrapper">
+    <div class="glass-wrapper">
+        <div class="glass">
+            <div class="beer">
+                <div class="foam"><span class="foambubble"></span><span class="foambubble"></span><span class="foambubble"></span><span class="foambubble"></span><span class="foambubble"></span></div>
+                <div class="bubbles"><span class="bubble"></span><span class="bubble"></span><span class="bubble"></span><span class="bubble"></span><span class="bubble"></span><span class="bubble"></span><span class="bubble"></span><span class="bubble"></span><span class="bubble"></span></div>
+            </div>
+        </div>
+        <div class="foamtop"><span class="ft-bubble"></span><span class="ft-bubble"></span><span class="ft-bubble"></span><span class="ft-bubble"></span></div>
+        <div class="coaster"></div>
+
+
+    </div>
+
+        <h1 id="text_submit" style="display: none;    width: 80%;
+                                                                 font-size: 32px;
+                                                                 color: white;
+                                                                 text-align: center;">
+        Please wait, our sophisticated socially just algorithm is picking random person...
+</h1>
+</div>
+
+</div>
+
+
+<div class="container beer-container slow-hide">
+    <div class="row">
+        <div class="col s12">
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12 m6">
+                            <i class="material-icons prefix">face</i>
+                            <input type="text" class="validate" id="name">
+                            <label for="name">Beer lover</label>
+                        </div>
+                        <div class="input-field col s12 m6">
+                            <i class="material-icons prefix">local_drink</i>
+                            <input id="msg" type="text" class="validate">
+                            <label for="msg">Beer</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                    <div class="input-field col s12 m12">
+                                                <button id="send" class="btn btn-default btn-block">
+                    Add your poison
+                    </button>
+                                            </div>
+</div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+        <%= render @view_module, @view_template, assigns %>
+        </div>
+
+
+<div id="price2" style="align-items: center;justify-content: center;height: 100vh;flex-direction: column;display: flex;background: white;" class="hide">
+<h1>Jim Refsnes</h1>
+<img src="/images/jim.jpg" style="width: 50%"/>
+</div>
+
+    <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
+
+        </body>
+        </html>
